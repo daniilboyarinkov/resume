@@ -1,0 +1,209 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-top: 12px;
+  margin-left: -8px;
+}
+
+h3:has(span) {
+  display: flex;
+  align-items: center;
+}
+
+h3 > span {
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 32px;
+}
+
+body {
+  background-color: #212121;
+  display: grid;
+  place-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pl-16 {
+  padding-left: 16px;
+}
+
+.content-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-block > p {
+  text-indent: 7px;
+  padding-top: 8px;
+  padding-right: 16px;
+
+  font-size: 14px;
+}
+
+.row-gap-16 {
+  display: grid;
+  row-gap: 16px;
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.block {
+  display: grid;
+  font-size: 14px;
+  font-family: Helvetica;
+  gap: 8px;
+  padding-left: 32px;
+}
+
+.work ul {
+  position: relative;
+  padding-left: 16px;
+}
+
+.work small {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.work ul li {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.view {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  width: 127px;
+  height: 127px;
+  border-radius: 50%;
+}
+
+.sheet {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  background-color: white;
+  margin: 32px;
+}
+
+.name-label {
+  text-align: center;
+  display: grid;
+  gap: 4px;
+  position: absolute;
+  left: 170px;
+  top: 48px;
+}
+
+
+.name {
+  font-size: 32px;
+}
+
+.profession {
+  color: #aaa;
+}
+
+.contacts {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  background: linear-gradient(90deg, #eee 0%, #eeeeee00 100%);
+  padding: 2px 4px;
+  border-radius: 8px;
+  color: #333;
+
+  font-size: 12px;
+}
+
+.contact-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.content {
+  position: absolute;
+  display: grid;
+  top: 140px;
+  left: 16px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 16px;
+  padding-left: 16px;
+  padding-right: 36px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  background: linear-gradient(90deg, #eee 0%, #eeeeee00 100%);
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+.skill-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+}
+
+.personal {
+  padding-right: 42px;
+}
