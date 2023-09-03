@@ -66,6 +66,10 @@ body {
   font-size: 14px;
 }
 
+.mb-4 {
+  margin-bottom: 4px;
+}
+
 .row-gap-16 {
   display: grid;
   row-gap: 16px;
@@ -86,7 +90,6 @@ body {
 .block {
   display: grid;
   font-size: 14px;
-  font-family: Helvetica;
   gap: 8px;
   padding-left: 32px;
 }
@@ -179,8 +182,9 @@ body {
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 100px 70px 100px;
+  place-items: start;
   row-gap: 8px;
   column-gap: 16px;
   padding-left: 16px;
