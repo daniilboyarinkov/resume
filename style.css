@@ -16,14 +16,30 @@
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
+header {
+  position: relative;
+}
+
 h2 {
-  font-size: 22px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 
 h3 {
   margin-top: 12px;
   margin-left: -8px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 h3:has(span) {
@@ -41,7 +57,7 @@ body {
   background-color: #212121;
   display: grid;
   place-items: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .cols-2 {
@@ -49,58 +65,34 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.pl-16 {
-  padding-left: 16px;
-}
-
 .content-blocks {
+  margin-top: 16px;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .content-block > p {
-  text-indent: 7px;
   padding-top: 8px;
   padding-right: 16px;
 
   font-size: 14px;
-}
-
-.mb-4 {
-  margin-bottom: 4px;
-}
-
-.row-gap-16 {
-  display: grid;
-  row-gap: 16px;
+  text-indent: 20px;
 }
 
 .pre-wrap {
   white-space: pre-wrap;
 }
 
-.mt-16 {
-  margin-top: 16px;
-}
-
-.mt-32 {
-  margin-top: 32px;
-}
-
-.block {
-  display: grid;
-  font-size: 14px;
-  gap: 8px;
-  padding-left: 32px;
-}
-
 .work ul {
   position: relative;
-  padding-left: 16px;
+  padding-left: 8px;
+  margin-left: 40%;
 }
 
 .work small {
   writing-mode: vertical-rl;
+  letter-spacing: 2px;
   text-orientation: mixed;
   position: absolute;
   left: -16px;
@@ -109,14 +101,12 @@ body {
 }
 
 .work ul li {
-  margin-top: 4px;
-  font-size: 14px;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.view {
-  position: absolute;
-  top: 21px;
-  left: 21px;
+.logo {
   width: 127px;
   height: 127px;
   border-radius: 50%;
@@ -127,18 +117,23 @@ body {
   width: 210mm;
   height: 297mm;
   background-color: white;
-  margin: 32px;
+  margin: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 .name-label {
+  justify-self: start;
+
   text-align: center;
   display: grid;
   gap: 4px;
-  position: absolute;
-  left: 170px;
-  top: 48px;
 }
-
 
 .name {
   font-size: 32px;
@@ -149,9 +144,6 @@ body {
 }
 
 .contacts {
-  position: absolute;
-  top: 16px;
-  right: 16px;
   display: grid;
   gap: 8px;
 }
@@ -161,12 +153,14 @@ body {
   align-items: center;
   gap: 4px;
 
-  background: linear-gradient(90deg, #eee 0%, #eeeeee00 100%);
   padding: 2px 4px;
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 8px;
-  color: #333;
+  color: #212121;
 
   font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
 }
 
 .contact-logo {
@@ -175,39 +169,101 @@ body {
 }
 
 .content {
-  position: absolute;
+  position: relative;
   display: grid;
-  top: 140px;
-  left: 16px;
+  padding: 16px;
+  padding-top: 0;
 }
 
 .skills {
   display: grid;
-  grid-template-columns: 100px 70px 100px;
+  grid-template-columns: 100px 70px 70px;
   place-items: start;
   row-gap: 8px;
-  column-gap: 16px;
+  column-gap: 8px;
   padding-left: 16px;
-  padding-right: 36px;
+
+  margin-top: 8px;
 }
 
 .skill {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 4px;
-  background: linear-gradient(90deg, #eee 0%, #eeeeee00 100%);
+  padding: 4px;
+  border: 1px solid rgba(221, 221, 221);
   border-radius: 8px;
 
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .skill-logo {
+  user-select: none;
   width: 24px;
   height: 24px;
-  border-radius: 8px;
+  border-radius: 4px;
+}
+
+.education {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.education > h2 {
+  margin: 0;
+  align-self: flex-start;
+}
+
+.personal-section {
+  margin-top: 64px;
 }
 
 .personal {
-  padding-right: 42px;
+  padding-left: 16px;
+}
+
+.personal > li:not(:last-child) > p {
+  margin-bottom: 8px;
+}
+
+.work-section {
+  width: 100%;
+  justify-self: center;
+  margin-top: 32px;
+}
+
+.work-section > div:nth-child(2)  {
+  margin-left: 25%;
+}
+
+.work-section > div:nth-child(3)  {
+  margin-left: 50%;
+}
+
+.work-section > div + div {
+  margin-top: 32px;
+}
+
+.work-section .whoami {
+  margin-top: 8px;
+  max-width: 400px;
+}
+
+aside.content {
+  padding-top: 16px;
+}
+
+.contribute-section {
+  margin-top: 64px;
+}
+
+.contribute-section > div:nth-child(2)  {
+  margin-left: 25%;
+}
+
+.contribute-section > div:nth-child(3)  {
+  margin-left: 50%;
 }
