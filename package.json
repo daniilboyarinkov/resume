@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Hey, I am Daniel. A web developer. That is my resume for you to get know me better. Please hire me ^-^",
+  "main": "index.js",
+  "scripts": {
+    "css": "csscomb --verbose -c csscomb.json style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniilboyarinkov/updated-resume.git"
+  },
+  "keywords": [
+    "frontend",
+    "resume",
+    "web",
+    "bitdittowit",
+    "daniel"
+  ],
+  "author": "bitdittowit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniilboyarinkov/updated-resume/issues"
+  },
+  "homepage": "https://github.com/daniilboyarinkov/updated-resume#readme"
+}

@@ -12,7 +12,7 @@ const contacts = [
   {
     id: "TG",
     icon: "./assets/tg.svg",
-    contact: "@BitDittoWit",
+    contact: "@bitdittowit",
   },
 ];
 

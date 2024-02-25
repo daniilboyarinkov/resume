@@ -13,7 +13,7 @@ contactsContainer.innerHTML = contactsContent;
 
 const skillsContainer = document.querySelector('.skills');
 
-const skillsContent =  skills.map(s => {
+const skillsContent = skills.map(s => {
   return `
   <li class="skill">
     <img class="skill-logo" src="${s.icon}" alt="${s.id}" />
@@ -24,8 +24,8 @@ const skillsContent =  skills.map(s => {
 
 skillsContainer.innerHTML = skillsContent;
 
-const personalContainer = document.querySelector('.personal');
+const aboutContainer = document.querySelector('ul.about');
 
-personalContainer.innerHTML = `
+aboutContainer.innerHTML = `
   ${mainContent[0].content.map(s => `<li><p>${s}</p></li>`).join('')}
 `;
