@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <script defer src="./data.js"></script>
   <script defer src="./index.js"></script>
-  <title>Resume</title>
-
+  <title>Резюме</title>
   <link rel="icon" type="image/png" href="https://vectorified.com/images/hire-me-icon-22.png" />
 </head>
 
@@ -21,9 +19,8 @@
       <div class="name-label">
         <p class="name">Бояринков Даниил</p>
         <p class="profession">Frontend developer</p>
-        <ul class="skills"></ul>
       </div>
-      <ul class="contacts"></ul>
+      <ul id="contacts"></ul>
     </header>
 
     <main class="content">
@@ -32,43 +29,16 @@
           <h2>О себе</h2>
           <ul class="about"></ul>
         </section>
+
+        <ul id="skills"></ul>
       </section>
 
       <section class="timeline">
+        <section id="work-experience"></section>
+
         <section class="education">
-          <h2>Образование:</h2>
-          <p class="block">"Прикладная информатика" <b>Сибирский Федериальный Университиет</b></p>
-        </section>
-
-        <section class="work-section">
-          <h2>Опыт работы</h2>
-          <div>
-            <h3>Yandex <p>Октябрь 2023 - Настоящее время</p>
-            </h3>
-            <div class="whoami">
-              <p>Подразделение разработки <b>VS Суперапп</b></p>
-              <p>> Отдел разработки <b>десктопного браузера</b></p>
-              <p>> Служба JavaScript-разработки</p>
-            </div>
-          </div>
-          <div class="work">
-            <h3>KozhinDev <p>Февраль 2023 - Сентябрь 2023</p>
-            </h3>
-            <ul>
-              <small>Проекты</small>
-              <li>моямосква.онлайн</li>
-              <li>kozhindev.com</li>
-              <li>inspect-app.kozhin.dev</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="contribute-section">
-          <h2>Open Source</h2>
-          <div>
-            <h3>Steroids React</h3>
-            <p>https://github.com/steroids/react</p>
-          </div>
+          <h2>Образование</h2>
+          <p>"Прикладная информатика" <b>Сибирский Федеральный Университет</b></p>
         </section>
       </section>
     </main>

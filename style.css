@@ -19,7 +19,7 @@
   padding: 0;
 }
 
-header {
+.sheet > header {
   position: relative;
 
   display: flex;
@@ -50,13 +50,10 @@ h2 {
 
   letter-spacing: .2px;
 
-  font-size: 18px;
-  font-weight: 600;
-}
+  color: #666;
 
-h3 {
-  margin-top: 12px;
-  margin-left: -8px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 p {
@@ -72,55 +69,6 @@ main.content {
   grid-template-areas: "personal timeline timeline";
 }
 
-/* Sections. */
-
-section.personal {
-  padding: 16px;
-
-  border-right: 1px solid #000;
-
-  grid-area: personal;
-}
-
-section.timeline {
-  padding: 16px;
-
-  grid-area: timeline;
-}
-
-.work ul {
-  position: relative;
-
-  margin-left: 40%;
-  padding-left: 8px;
-}
-
-.work small {
-  position: absolute;
-  top: 50%;
-  left: -16px;
-
-  transform: translateY(-50%) rotate(180deg);
-  letter-spacing: 2px;
-
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-
-.work ul li {
-  margin-top: 8px;
-
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.logo {
-  width: 127px;
-  height: 127px;
-
-  border-radius: 50%;
-}
-
 .sheet {
   position: relative;
 
@@ -131,60 +79,12 @@ section.timeline {
   background-color: white;
 }
 
-.name-label {
-  display: grid;
-
-  text-align: center;
-
-  justify-self: start;
-  gap: 4px;
-}
-
-.name {
-  font-size: 32px;
-}
-
-.profession {
-  color: #aaa;
-}
-
-.contacts {
-  display: grid;
-
-  gap: 8px;
-}
-
-.contact {
+#skills {
   display: flex;
-  align-items: center;
-
-  padding: 2px 4px;
-
-  letter-spacing: .4px;
-
-  color: #212121;
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 8px;
-
-  font-size: 12px;
-  font-weight: 500;
-
-  gap: 4px;
-}
-
-.contact-logo {
-  width: 24px;
-  height: 24px;
-}
-
-.skills {
-  display: grid;
+  flex-wrap: wrap;
 
   margin-top: 8px;
-  padding-left: 16px;
 
-  grid-template-columns: 100px 70px 70px;
-  place-items: start;
   row-gap: 8px;
   column-gap: 8px;
 }
@@ -193,7 +93,7 @@ section.timeline {
   display: flex;
   align-items: center;
 
-  padding: 4px;
+  padding: 2px 6px 2px 2px;
 
   border: 1px solid rgba(221, 221, 221);
   border-radius: 8px;
@@ -213,61 +113,134 @@ section.timeline {
   border-radius: 4px;
 }
 
-.education {
-  display: flex;
-  align-items: center;
+.logo {
+  width: 128px;
+  height: 128px;
 
-  margin: 0 auto;
+  border-radius: 50%;
+}
 
+.name-label {
+  display: grid;
+
+  text-align: center;
+
+  justify-self: start;
   gap: 4px;
 }
 
-.education > h2 {
-  align-self: flex-start;
-
-  margin: 0;
+.name {
+  font-size: 32px;
 }
 
-ul.about {
-  padding-left: 16px;
+.profession {
+  color: #aaa;
 }
 
-ul.about > li:not(:last-child) > p {
-  margin-bottom: 8px;
+#contacts {
+  display: grid;
+
+  gap: 8px;
 }
 
-.work-section {
-  width: 100%;
-  margin-top: 32px;
+.contact {
+  display: flex;
+  align-items: center;
 
-  justify-self: center;
+  padding: 2px 12px 2px 4px;
+
+  letter-spacing: .4px;
+
+  color: #212121;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  gap: 8px;
 }
 
-.work-section > div:nth-child(2)  {
-  margin-left: 25%;
+.contact-logo {
+  width: 24px;
+  height: 24px;
 }
 
-.work-section > div:nth-child(3)  {
-  margin-left: 50%;
+/* Sections. */
+
+section.personal {
+  padding: 16px;
+
+  border-right: 1px solid #000;
+
+  grid-area: personal;
 }
 
-.work-section > div + div {
-  margin-top: 32px;
+section.timeline {
+  display: grid;
+
+  padding: 16px;
+
+  grid-area: timeline;
+  row-gap: 24px;
 }
 
-.work-section .whoami {
-  max-width: 400px;
-  margin-top: 8px;
+.work {
+  display: grid;
+
+  padding: 8px 0;
+
+  border-top: 1px solid #000;
+
+  row-gap: 12px;
 }
 
-.contribute-section {
-  margin-top: 64px;
+.work__position {
+  color: #aaa;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
-.contribute-section > div:nth-child(2)  {
-  margin-left: 25%;
+.work__period {
+  margin-left: auto;
+
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.contribute-section > div:nth-child(3)  {
-  margin-left: 50%;
+
+
+.work__responsibilities {
+  display: grid;
+
+  text-align: justify;
+
+  row-gap: 4px;
+}
+
+.work__responsibilities > li > p::before {
+  position: relative;
+  left: -16px;
+
+  content:  "—";
+}
+
+.work__responsibilities > li {
+  text-indent: 16px;
+}
+
+.work__stack {
+  display: flex;
+
+  font-size: 12px;
+
+  gap: 8px;
+}
+
+.work__stack > li {
+  text-decoration: underline;
+
+  text-underline-offset: 2px;
 }
