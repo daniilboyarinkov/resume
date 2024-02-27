@@ -27,8 +27,6 @@
   justify-content: space-between;
 
   padding: 16px;
-
-  border-bottom: 1px solid #000;
 }
 
 body {
@@ -79,27 +77,22 @@ main.content {
   background-color: white;
 }
 
-#skills {
+.keywords {
   display: flex;
   flex-wrap: wrap;
 
-  margin-top: 8px;
-
-  row-gap: 8px;
-  column-gap: 8px;
+  gap: 8px;
 }
 
-.skill {
-  display: flex;
-  align-items: center;
-
-  padding: 2px 6px 2px 2px;
+ul.keywords > li {
+  padding: 4px 8px 6px 6px;
 
   border: 1px solid rgba(221, 221, 221);
   border-radius: 8px;
 
   font-size: 12px;
   font-weight: 500;
+  line-height: 12px;
 
   gap: 4px;
 }
@@ -168,34 +161,83 @@ main.content {
 
 /* Sections. */
 
-section.personal {
-  padding: 16px;
+section#personal {
+  display: flex;
+  flex-direction: column;
 
-  border-right: 1px solid #000;
+  padding: 0 16px;
 
   grid-area: personal;
+  row-gap: 64px;
 }
 
-section.timeline {
+section#timeline {
   display: grid;
 
-  padding: 16px;
+  padding: 0 16px;
 
   grid-area: timeline;
   row-gap: 24px;
 }
 
-.work {
-  display: grid;
-
-  padding: 8px 0;
-
-  border-top: 1px solid #000;
+section#languages,
+section#skills,
+section#achievements,
+section#about {
+  display: flex;
+  flex-direction: column;
 
   row-gap: 12px;
 }
 
-.work__position {
+section#about p {
+  text-align: justify;
+  text-indent: 12px;
+}
+
+section#about p::before {
+  position: relative;
+  left: -12px;
+
+  content: "—";
+}
+
+section#achievements > ul {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 4px;
+}
+
+section#achievements > ul > li > p::before {
+  position: relative;
+  left: -4px;
+
+  content: "—";
+}
+
+section#languages > ul > li > p{
+  text-indent: 4px;
+}
+
+section#languages > ul > li > p::before {
+  position: relative;
+  left: -4px;
+
+  content: "—";
+}
+
+.work,
+.education {
+  display: grid;
+
+  padding: 8px 0;
+
+  row-gap: 12px;
+}
+
+.work__position,
+.education__position {
   color: #aaa;
 
   font-size: 16px;
@@ -203,14 +245,11 @@ section.timeline {
   line-height: 20px;
 }
 
-.work__period {
-  margin-left: auto;
-
+.work__period,
+.education__period {
   font-size: 20px;
   font-weight: 400;
 }
-
-
 
 .work__responsibilities {
   display: grid;

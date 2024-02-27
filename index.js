@@ -21,19 +21,20 @@ contactsContainer.innerHTML = contacts.map(c => {
 });
 
 const skillsContainer = document.querySelector('#skills');
-skillsContainer.innerHTML = skills.map(s => {
-  return `
-  <li class="skill">
-    <img class="skill-logo" src="${s.icon}" alt="${s.id}" />
-    <p>${s.id}</p>
-  </li>
-  `;
-});
+skillsContainer.innerHTML = `
+<h2>Технологии</h2>
+<ul class="keywords">${createLiList(skills)}</ul>
+`;
 
 /* About me section. */
 
-const aboutContainer = document.querySelector('ul.about');
-aboutContainer.innerHTML = createLiList(mainContent[0].content);
+const aboutContainer = document.querySelector('#about');
+aboutContainer.innerHTML = `
+<h2>О себе</h2>
+<div>
+  ${aboutDescription.split('\n').map((part) => `<p>${part}</p>`)}
+</div>
+`;
 
 /* Work experience. */
 
@@ -57,4 +58,32 @@ worksContainer.innerHTML = `
       </ul>
     </section>
   `)}
+`;
+
+/* Education. */
+
+const educationContainer = document.querySelector('#education');
+educationContainer.innerHTML = `
+  <h2>Образование</h2>
+  ${educations.map((education) => `
+    <section class="education">
+      <header>
+        <h3>${education.name}</h3>
+        <p class="education__position">${education.position}</p>
+        <p class="education__period">${education.period}</p>
+      </header>
+    </section>
+  `)}
+`;
+
+const languagesContainer = document.querySelector('#languages');
+languagesContainer.innerHTML = `
+<h2>Языки</h2>
+<ul class="languages">${createLiList(languages)}</ul>
+`;
+
+const achievementsContainer = document.querySelector('#achievements');
+achievementsContainer.innerHTML = `
+<h2>Достижения 2023-2024</h2>
+<ul class="achievements">${createLiList(achievements)}</ul>
 `;
