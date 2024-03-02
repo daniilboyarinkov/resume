@@ -14,8 +14,10 @@ const contactsContainer = document.querySelector('#contacts');
 contactsContainer.innerHTML = contacts.map(c => {
   return `
   <li class="contact">
-    <img class="contact-logo" src="${c.icon}" />
-    <p>${c.contact}</p>
+    <a href="${c.href}">
+      <img class="contact-logo" src="${c.icon}" alt="${c.id}" />
+      <p>${c.contact}</p>
+    </a>
   </li>
   `;
 });
