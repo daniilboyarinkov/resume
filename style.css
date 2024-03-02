@@ -136,7 +136,11 @@ ul.keywords > li {
   gap: 8px;
 }
 
-.contact {
+li.contact {
+  list-style: none;
+}
+
+.contact > a {
   display: flex;
   align-items: center;
 
@@ -193,6 +197,8 @@ section#about {
 section#about p {
   text-align: justify;
   text-indent: 12px;
+  letter-spacing: .2px;
+  word-spacing: 6px;
 }
 
 section#about p::before {
